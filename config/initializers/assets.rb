@@ -20,8 +20,11 @@ unless %w[development test].include?(Rails.env)
   )
 
   File.open(secret_file_path, 'w') do |file|
-    puts "ANYA_SECRET is here: #{ENV['ANYA_SECRET']}"
+    puts "ANYA_SECRET is here 1: #{ENV['ANYA_SECRET']}"
     puts secret_file_path
     file.write(ENV['ANYA_SECRET'])
+    puts "ANYA_SECRET is here 2: #{ENV['ANYA_SECRET']}"
   end
+
+  puts "ANYA_SECRET is here 3: #{ENV['ANYA_SECRET']}"
 end
